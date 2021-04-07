@@ -1,0 +1,85 @@
+.resume {
+    padding-top: 120px;
+    
+    &__wrapper {
+        padding-left: 115px;
+        margin-top: 69px;
+        display: grid;
+        grid-template-columns: repeat(2, 375px);
+        column-gap: 143px;
+    }
+    &__colomn {
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            left: -7px;
+            top: 5px;
+            border-radius: 100%;
+            background: $main-color;
+        }
+        &_title {
+            margin-bottom: 0;
+            margin-left: 43px;
+        }
+    }
+    ul {
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: calc(100% + 50px);
+            top: -50px;
+            background:#000000;
+        }
+    }
+    li {
+        list-style-type: none;
+    }
+    &__item {
+        &_head {
+            position: relative;
+            margin-top: 45px;
+            padding-left: 100px;
+            &::before {
+                content: '';
+                position: absolute;
+                width: 42px;
+                height: 1px;
+                background: #000;
+                left: 0;
+                top: 21px;
+            }
+        }
+        &_title {
+            margin-bottom: 0;
+        }
+        &_icon {
+            position: absolute;
+            top: 16px;
+            left: 60px;
+            @include before_circle;
+            &:before {
+                left: -18px;
+                top: -13px;
+            }
+        }
+        &_location {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+            color: #000000;
+        }
+        &_body {
+            margin-top: 12px;
+            margin-left: 43px;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+            color: #000000;
+        }
+    }
+}
